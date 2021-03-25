@@ -1,0 +1,23 @@
+<div class="c-carousel" id="{{id}}">
+    <div class="c-carousel__dots-wrapper">
+            {{#each items}}
+                <a class="c-carousel__dot" href="#{{this.id}}"></a>
+            {{/each}}
+    </div>
+    <span class="c-carousel__prev">prev</span>
+    <span class="c-carousel__next">next</span>
+    <div class="c-carousel__contentWrapper">
+        {{#unless @partial-block}}
+            {{#if heroItems }}
+                {{#each items }}
+                    {{>molecules-hero  
+                        bemNomencalture="c-carousel__item" 
+                        id=this.id
+                        title=this.title
+                        subtitle=this.subtitle
+                    }}
+                {{/each}}
+            {{/if}}
+        {{/unless}}
+    </div>
+</div>
