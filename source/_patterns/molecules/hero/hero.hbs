@@ -1,0 +1,10 @@
+<article class="c-hero  {{ styleModifier }}  {{bemNomencalture}}" id="{{id}}">
+    {{> atoms-landscape styleModifier="c-hero__image" }}
+    <div class="c-hero__content-wrapper">
+        <header>
+            {{>atoms-heading tag="h2" text=title }}
+        </header>
+        {{>atoms-heading tag="h3" styleModifier="c-hero__subtitle"  text=subtitle }}
+        {{>atoms-paragraph styleModifier="c-hero__copy" text=description }}
+    </div>
+</article> 

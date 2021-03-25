@@ -1,0 +1,26 @@
+<article class="{{ styleModifier }}">
+
+	<b>Passing context thought json</b>
+	{{#testA}}
+		{{>atoms-test-a}}
+	{{/testA}}
+
+	<b>Adding style modifier</b>
+	{{#testA}}
+		{{>atoms-test-a:atomA}}
+	{{/testA}}
+
+	<b>Modifing a context prop using an attribute</b>
+	{{#testA}}
+		{{>atoms-test-a:atomA("content": "I dont want this to be ever overwriten by a json, kind of a public FINAL class programming concept.")}}
+	{{/testA}}
+	<p>new propery is updated but all other properties in the context are lost</p>
+	
+	<b>Modifing a context prop using an attribute AGAIN</b>
+	{{#testA}}
+		{{>atoms-test-a:atomA("content": "I dont want this to be ever overwriten by a json, kind of a public FINAL class programming concept.")}}
+	{{/testA}}
+	<p>new propery is updated but all other properties in the context are lost</p>
+	
+	
+</article> 

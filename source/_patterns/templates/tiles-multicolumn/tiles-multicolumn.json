@@ -1,0 +1,19 @@
+{
+    "section-header": [
+        {
+            "title": "Multicolumn tiles section title",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus odio dolor neque mollitia autem, repellat nesciunt eligendi assumenda delectus animi, quod, ut tempore debitis accusantium. Sint maxime corrupti praesentium ipsum."
+        }
+    ],
+    "molecules-tiles" : [
+        {
+            "header" : "Tile header 1"
+        },
+        {
+            "header" : "Tile header 2"
+        },
+        {
+            "header" : "Tile header 3"
+        }
+    ]
+}

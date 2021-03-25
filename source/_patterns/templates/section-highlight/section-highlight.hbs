@@ -1,0 +1,8 @@
+<div>
+    {{#if @partial-block}}
+        {{> @partial-block }}
+    {{/if}}
+    {{#unless @partial-block}}
+        No component passed thought partial block.
+    {{/unless}}    
+</div>

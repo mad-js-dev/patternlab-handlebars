@@ -1,0 +1,21 @@
+{
+    "id": "myCustomCarousel-1",
+    "heroItems": true,
+    "items": [
+        {
+            "id": "myCustomCarousel-1__item-1",
+            "title": "Carousel hero title",
+            "subtitle": "Carousel hero subtitle"
+        },
+        {
+            "id": "myCustomCarousel-1__item-2",
+            "title": "Carousel hero title",
+            "subtitle": "Carousel hero subtitle"
+        },
+        {
+            "id": "myCustomCarousel-1__item-3",
+            "title": "Carousel hero title",
+            "subtitle": "Carousel hero subtitle"
+        }
+    ]
+}
