@@ -12,7 +12,7 @@
     "pl:version": "patternlab --version",
     "styleWatcher": "webpack --config webpack.config.styles.js --mode development --watch",
     "scriptsWatcher": "webpack --config webpack.config.scripts.js --mode development --watch",
-    "deploy": "npm run pl:build"
+    "deploy": "gh-pages -d docs"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +27,7 @@
     "remove-files-webpack-plugin": "^1.4.4"
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "import-glob": "^1.5.0"
   }
 }
