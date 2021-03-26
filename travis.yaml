@@ -1,10 +1,7 @@
-language: node_js
-node_js:
-- 12.9.0
-cache: npm
 deploy:
-    provider: pages
-    skip-cleanup: true
-    github-token: $GITHUB_TOKEN
-    on: 
-      branch: master
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: main
