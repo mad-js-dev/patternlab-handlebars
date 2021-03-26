@@ -13,6 +13,7 @@ deploy:
     provider: pages
     skip-cleanup: true
     github-token: $TravisCI
+    local_dir: docs
     on: 
       branch:
         only:
