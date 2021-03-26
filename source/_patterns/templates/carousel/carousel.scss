@@ -1,7 +1,8 @@
 .c-carousel {
     overflow: hidden;
     position: relative;
-
+    color: red; 
+    
     &__contentWrapper {
         display: flex;
         overflow-x: auto;
