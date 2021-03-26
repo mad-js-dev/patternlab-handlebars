@@ -16,4 +16,7 @@ cache:
   directories:
   - node_modules
 script:
+  - npm run deployStyles  
+  - npm run deployScripts
+  - npm run build  
   - npm run deploy
