@@ -18,5 +18,4 @@ cache:
 script:
   - npm run deployStyles  
   - npm run deployScripts
-  - npm run pl:build  
-  - npm run deploy
+  - npm run pl:build
