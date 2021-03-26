@@ -7,7 +7,7 @@ deploy:
     skip-cleanup: true
     github-token: $TravisCI
     on: 
-      branches:
+      branch:
         only:
           - main
 language: node_js
