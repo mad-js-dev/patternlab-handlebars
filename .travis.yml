@@ -1,7 +1,13 @@
 language: node_js
 node_js:
 - 12.9.0
-cache: npm
+cache:
+  directories:
+  - node_modules
+script:
+  - npm run deployStyles  
+  - npm run deployScripts
+  - npm run pl:build
 deploy:
     provider: pages
     skip-cleanup: true
@@ -10,13 +16,3 @@ deploy:
       branch:
         only:
           - main
-language: node_js
-node_js:
-  - 12.9.0
-cache:
-  directories:
-  - node_modules
-script:
-  - npm run deployStyles  
-  - npm run deployScripts
-  - npm run pl:build
