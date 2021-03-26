@@ -12,6 +12,7 @@
     "pl:version": "patternlab --version",
     "deployStyles": "webpack --config webpack.config.styles.js --mode development",
     "styleWatcher": "webpack --config webpack.config.styles.js --mode development --watch",
+    "deployScripts": "webpack --config webpack.config.scripts.js --mode development",
     "scriptsWatcher": "webpack --config webpack.config.scripts.js --mode development --watch",
     "deploy": "gh-pages -d docs"
   },
