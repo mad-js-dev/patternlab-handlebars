@@ -8,12 +8,12 @@ script:
   - npm run deployStyles  
   - npm run deployScripts
   - npm run pl:build
-  - bash ./scripts/deploy.sh
 deploy:
     provider: pages
     skip-cleanup: true
     github-token: $GITHUB_TOKEN
     local_dir: docs
+    target_branch: gh-pages
     on: 
       branch:
         only:
