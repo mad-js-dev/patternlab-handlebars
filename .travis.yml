@@ -17,18 +17,9 @@ deploy:
       branch:
         only:
           - main
-after_success: |
-  if [ -n "$GITHUB_TOKEN" ]; then
-    cd "$TRAVIS_BUILD_DIR"
-    # This generates a `docs` directory containing the website.
-    make docs
-    cd docs
-    git init
-    git checkout -b gh-pages
-    git add .
-    git -c user.name='travis' -c user.email='travis' commit -m init
-    # Make sure to make the output quiet, or else the API token will leak!
-    # This works because the API key can replace your password.
-    git push -f -q https://<me>:$GITHUB_TOKEN@github.com/<me>/<myrepo>-gh-pages gh-pages &>/dev/null
-    cd "$TRAVIS_BUILD_DIR"
-  fi
+after_success:
+- bash ./scripts/deploy.sh
+env:
+  global:
+  - GH_USER: mad-js-dev
+  - GH_REPO: patternlab-handlebars
