@@ -8,6 +8,7 @@ script:
   - npm run deployStyles  
   - npm run deployScripts
   - npm run pl:build
+  - bash ./scripts/deploy.sh
 deploy:
     provider: pages
     skip-cleanup: true
@@ -17,8 +18,6 @@ deploy:
       branch:
         only:
           - main
-after_success:
-- bash ./scripts/deploy.sh
 env:
   global:
   - GH_USER: mad-js-dev
