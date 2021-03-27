@@ -5,20 +5,26 @@ cache:
   directories:
   - node_modules
 script:
-  - npm run deployStyles  
-  - npm run deployScripts
-  - npm run pl:build
+- npm run deployStyles
+- npm run deployScripts
+- npm run pl:build
+- bash ./scripts/deploy.sh
+after_script:
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+  - node ./node_modules/grunt-cli/bin/grunt release
 deploy:
-    provider: pages
-    skip-cleanup: true
-    github-token: $GITHUB_TOKEN
-    local_dir: docs
-    target_branch: gh-pages
-    on: 
-      branch:
-        only:
-          - main
+  provider: pages
+  skip-cleanup: true
+  github-token: "$GITHUB_TOKEN"
+  local_dir: docs
+  target_branch: gh-pages
+  on:
+    branch:
+      only:
+      - main
 env:
   global:
   - GH_USER: mad-js-dev
   - GH_REPO: patternlab-handlebars
+  - secure: 1NtgRNuiFEzDcXMbdSzS877fRbD8YP2LQeeljI0yprx6fuYYmvYip4tY/VL4zaBdODu6ggxiznIju+g+JPW6eZVFOgRyHdEOnS7CEYEXOJ3t0XO1XvSEUjUqhHTC1epT1VDtx/pChK3ZCQcPwfagRAXiFMmo4Hr3+2rO3yipqOAhj5ZLSi7Jw5zgyRXDQq4sfnhec9trVxQaAp/Tv5iRGslfX5WiOeZU1n4O/G8qut1TKaXfdw8FgmTvjBcNZg508ZDd/Hy5F7lFZt8fUQaueXze3tX7864sYLpLVJ0pz4EmDL6v8EzvqXMzVvMffY1qhXYJK1h9RSX+pJYZ6/RbCKuQl3K6slE48hbDAVEnPCQ29fTuUdbQFBL8yq7LP9IRLg2J0Faw021BAz2HXCCYp/j6mahun2N8fkKwd8UHjPbkl1eRmFXRnFu7dI09cpFXRPFFvXsNQ0Pa2e+6aX9X0AyFnUrFSbeop7GZdZO7Lofoy6zqyfVxTLbYL8zvYNG8j4S6YtyLViI+1vJ1MNaXPSnQkpgQboRWTaicAt0wdr03/NsQ/bz3B05M2jcDgBwQ2x0fboLHH+9E0zrZpw4MeMTM5TUKy3JNNZO9kR0zJ1wgCzcjHJbSpM1QsvNLMeBmlzYskr/TN4Q/GEqpQ8pb6yXAKRT/O3a8ZApvnPx8ZLE=
