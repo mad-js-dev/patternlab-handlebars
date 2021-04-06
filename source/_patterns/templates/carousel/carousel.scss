@@ -1,7 +1,6 @@
 .c-carousel {
     overflow: hidden;
     position: relative;
-    color: red; 
     
     &__contentWrapper {
         display: flex;
@@ -27,8 +26,6 @@
         transform: scale(1);
         transition: transform 0.5s;
         position: relative;
-        
-        
     }
 
     &__item--no-content {

@@ -1,20 +1,26 @@
 {
     "carouselHero": {
         "id": "myCustomCarousel-1",
-        "heroItems": true,
+        "itemType": "hero",
         "items": [
             {
                 "id": "myCustomCarousel-1__item-1",
+                "image":"http://via.placeholder.com/1200x800",
+                "alt": "Default carousel hero alt",
                 "title": "Carousel hero title",
                 "subtitle": "Carousel hero subtitle"
             },
             {
                 "id": "myCustomCarousel-1__item-2",
+                "image":"http://via.placeholder.com/1200x800",
+                "alt": "Default carousel hero alt",
                 "title": "Carousel hero title",
                 "subtitle": "Carousel hero subtitle"
             },
             {
                 "id": "myCustomCarousel-1__item-3",
+                "image":"http://via.placeholder.com/1200x800",
+                "alt": "Default carousel hero alt",
                 "title": "Carousel hero title",
                 "subtitle": "Carousel hero subtitle"
             }
@@ -30,13 +36,16 @@
             ],
             "molecules-tiles" : [
                 {
-                    "header" : "Tile header 1"
+                    "header" : "Tile header 1",
+                    "image": "http://via.placeholder.com/1200x800"
                 },
                 {
-                    "header" : "Tile header 2"
+                    "header" : "Tile header 2",
+                    "image": "http://via.placeholder.com/1200x800"
                 },
                 {
-                    "header" : "Tile header 3"
+                    "header" : "Tile header 3",
+                    "image": "http://via.placeholder.com/1200x800"
                 }
             ]
         }

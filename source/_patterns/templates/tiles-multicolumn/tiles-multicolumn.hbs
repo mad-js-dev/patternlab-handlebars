@@ -1,11 +1,11 @@
-<section class="c-section">
+<section class="c-tiles-multicolumn">
     {{#section-header}}
-        {{> molecules-section-header}}
+        {{> molecules-section-header bemNomenclature="c-tiles-multicolumn__header"}}
     {{/section-header}}
 
-    <div class="c-tiles-multicolumn-wrapper">
-        {{#molecules-tiles}}
-            {{> molecules-tile}}
-        {{/molecules-tiles}}
+    <div class="c-tiles-multicolumn__wrapper">
+        {{#each molecules-tiles }}
+            {{> molecules-tile this}}
+        {{/each}}
     </div>
 </section><!--end section-->

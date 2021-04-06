@@ -7,17 +7,20 @@
     <span class="c-carousel__prev">prev</span>
     <span class="c-carousel__next">next</span>
     <div class="c-carousel__contentWrapper">
+        {{ @partial-block }}
+        
         {{#unless @partial-block}}
-            {{#if heroItems }}
-                {{#each items }}
-                    {{>molecules-hero  
-                        bemNomencalture="c-carousel__item" 
-                        id=this.id
-                        title=this.title
-                        subtitle=this.subtitle
-                    }}
-                {{/each}}
-            {{/if}}
+            {{#each items }}
+                {{>molecules-hero  
+                    bemNomenclature="c-carousel__item" 
+                    id=this.id 
+                    image=this.image
+                    alt=this.alt
+                    title=this.title
+                    subtitle=this.subtitle
+                }} 
+            {{/each}}
+                
         {{/unless}}
     </div>
 </div>

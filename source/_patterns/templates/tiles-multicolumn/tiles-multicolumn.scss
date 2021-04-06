@@ -1,0 +1,25 @@
+.c-tiles-multicolumn {
+    &__header {
+        margin: 50px 0;
+        text-align: center;
+
+        .c-section-header__title {
+            max-width: 65%;
+            margin:0 auto 42px auto;
+        }
+
+        .c-section-header__desc {
+            max-width: 55%;
+            margin:0 auto 30px auto;
+        }
+    }
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+
+        .c-tile {
+            max-width: 30%;
+        }
+    }
+}
