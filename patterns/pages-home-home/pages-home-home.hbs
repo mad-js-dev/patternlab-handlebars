@@ -4,9 +4,11 @@
 
 	{{>templates-carousel carouselHero}}
 
-	{{#organisms-tiles-multicolumn}}
-		{{> templates-tiles-multicolumn }}
-	{{/organisms-tiles-multicolumn}}
+	{{#>templates-block-section }}
+		{{#organisms-tiles-multicolumn}}
+			{{> templates-tiles-multicolumn }}
+		{{/organisms-tiles-multicolumn}}
+	{{/templates-block-section }}
 </main>
 
 {{> organisms-footer }}

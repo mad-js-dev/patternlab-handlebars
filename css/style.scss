@@ -17,7 +17,7 @@
 @import "scss/abstracts/colors";
 @import "scss/abstracts/typography";
 
-
+@import "scss/variables/index";
 
 
 
@@ -53,7 +53,7 @@
 @import "scss/components/buttons";
 @import "scss/components/definition-list";
 @import "scss/components/definition-list-list";
-@import "scss/components/hero";
+//@import "scss/components/hero";
 @import "scss/components/tout";
 @import "scss/components/section";
 @import "scss/components/stacked-block";

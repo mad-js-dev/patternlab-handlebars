@@ -1,8 +1,12 @@
-<div class="c-hero">
-
-	<img src="{{ src }}" alt="{{ alt }}" class="c-hero__img" />
+<div id="{{id}}" class="c-hero {{ bemNomenclature }}">
+	{{>atoms-landscape
+		bemNomenclature= "c-hero__image"
+		src=image
+		alt=alt
+	}}
 	<div class="c-hero__body">
-		<h2 class="c-hero__headline">{{ heading }}</h2>
+		<h2 class="c-hero__headline">{{ title }}</h2>
+		<p class="c-hero__subheadline">{{ subtitle }}</p>
 	</div>
 
 </div><!-- end c-hero-->
