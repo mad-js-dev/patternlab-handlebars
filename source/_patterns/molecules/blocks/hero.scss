@@ -1,0 +1,25 @@
+.c-hero {
+    max-height: 100vh;
+    overflow: hidden; 
+    
+    &__image {
+        width: 100%;
+        position: relative;
+        margin-top: -50vh;
+        top: 25vh;
+    } 
+
+    &__body {
+        position: absolute;
+        bottom: 20%;
+        left: 15%;
+    }
+
+    &__headline {
+        font-size: 42px;
+    }
+
+    &__body {
+        font-size: 30px;
+    }
+}

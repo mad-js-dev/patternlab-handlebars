@@ -1,3 +1,8 @@
 .c-tile {
-    max-width: 500px;  
+    max-width: 500px;
+    
+    &__header {
+        font-size: 26px;
+        margin: 10px 0 20px 0;
+    }
 } 
