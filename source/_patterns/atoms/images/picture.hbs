@@ -1,0 +1,7 @@
+<picture class="{{ bemNomenclature }} {{ styleModifier }}">
+    {{#each}}
+        <source srcset="{{sourceset}}" media="(min-width: 600px)">
+    {{/each}}
+    <img src="{{ src }}" 
+        alt="{{ alt }}" />
+</picture>
