@@ -14,6 +14,8 @@
     "styleWatcher": "webpack --config webpack.config.styles.js --mode development --watch",
     "deployScripts": "webpack --config webpack.config.scripts.js --mode development",
     "scriptsWatcher": "webpack --config webpack.config.scripts.js --mode development --watch",
+    "deployDev": "webpack --config webpack.config.dev.js --mode development",
+    "devWatcher": "webpack --config webpack.config.dev.js --mode development --watch",
     "deploy": "gh-pages -d docs"
   },
   "keywords": [],
