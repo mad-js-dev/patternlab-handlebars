@@ -1,17 +1,28 @@
 .c-hero {
     max-height: 100vh;
     overflow: hidden; 
+    position: relative;
+    
+    @include media('<tablet') {
+        height: 66vh;
+    }
+
     
     &__image {
         width: 100%;
         position: relative;
         margin-top: -50vh;
         top: 25vh;
+
+        @include media('>desktop-s', 'non-retina') {
+            height: 66vh;
+        }
+        
     } 
 
     &__body {
         position: absolute;
-        bottom: 20%;
+        bottom: 20%; 
         left: 15%;
     }
 
