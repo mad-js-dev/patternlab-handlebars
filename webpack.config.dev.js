@@ -31,6 +31,14 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(woff2?|ttf|otf|eot|svg)$/,
+        exclude: /node_modules/,
+        loader: 'file-loader',
+        options: {
+            name: '[path][name].[ext]'
+        }
+      },
+      {
         test: /\.js$/,
         enforce: 'pre',
         loader: 'import-glob',
@@ -40,10 +48,18 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           { loader: "css-loader", options: { url: false, importLoaders: 1 } },
+          { loader: 'resolve-url-loader',
+            options: {
+              debug: true,
+              root: ''
+            }
+          },
           { loader: 'sass-loader',
             options: {
               sassOptions: {
-                importer: globImporter()
+                importer: globImporter(),
+                sourceMap: true,
+                sourceMapContents: false
               }
             }
           },

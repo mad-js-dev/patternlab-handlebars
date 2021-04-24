@@ -1,0 +1,9 @@
+.c-text {
+    &--headline-primary {
+        font-family: map-get($font-headline-sans, name), map-get($font-headline-sans, familyType);
+    }
+
+    &--headline-secondary {
+        font-family: map-get($font-headline-serif, name), map-get($font-headline-serif, familyType);
+    }
+}

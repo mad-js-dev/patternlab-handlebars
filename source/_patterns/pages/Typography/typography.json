@@ -1,0 +1,60 @@
+{
+    "headings": [
+        {
+            "tag": "h1",
+            "text": "H1. A heading is a word, phrase, or sentence at the beginning of a written passage",
+            "small": " that explains what it's about"
+        },
+        {
+            "tag": "h2",
+            "text": "H2. A heading is a word, phrase, or sentence at the beginning of a written passage",
+            "small": " that explains what it's about"
+        },
+        {
+            "tag": "h3",
+            "text": "H3. A heading is a word, phrase, or sentence at the beginning of a written passage",
+            "small": " that explains what it's about"
+        },
+        {
+            "tag": "h4",
+            "text": "H4. A heading is a word, phrase, or sentence at the beginning of a written passage",
+            "small": " that explains what it's about"
+        },
+        {
+            "tag": "h5",
+            "text": "H5. A heading is a word, phrase, or sentence at the beginning of a written passage",
+            "small": " that explains what it's about"
+        },
+        {
+            "tag": "h6",
+            "text": "H6. A heading is a word, phrase, or sentence at the beginning of a written passage",
+            "small": " that explains what it's about"
+        }
+    ],
+    "fontFormating": [
+        {
+            "text": "Bolds weight makes letters of a text <strong>thicker than the surrounding text</strong>."
+        },
+        {
+            "text": "Italics are used primarily to denote <em>titles and names</em> of particular works or objects"
+        },
+        {
+            "text": "Represents text <mark>which is marked or highlighted</mark> for reference or notation purposes."
+        },
+        {
+            "text": "Represents <small>side-comments and small print</small>, like copyright and legal text, independent of its styled presentation."
+        },
+        {
+            "text": "Represents a range of text that <del>has been deleted</del> from a document."
+        },
+        {
+            "text":  "Represents a range of text that <ins>has been added</ins> to a document."
+        },
+        {
+            "text": "Specifies inline text which <sub>should be displayed as subscript</sub> for solely typographical reasons."
+        },
+        {
+            "text": "Specifies inline text which is to be <sup>displayed as superscript</sup> for solely typographical reasons."
+        }
+    ]
+}
