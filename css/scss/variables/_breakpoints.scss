@@ -1,3 +1,5 @@
+// Dmitry Sheiko’s Responsive media queries
+
 $breakpoints: (
   'phone-s': 320px, 
   'phone-m': 375px, 
@@ -7,3 +9,52 @@ $breakpoints: (
   'desktop-m': 1440px,
   'desktop-l': 2560px
 ) !default;
+
+
+@function translate-media-condition($c) {
+  $condMap: (
+    "screen": "only screen",
+    "print": "only print",
+    "retina": "(-webkit-min-device-pixel-ratio: 1), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)",
+    "non-retina": "(-webkit-min-device-pixel-ratio: 1), (min--moz-device-pixel-ratio: 1), (-o-min-device-pixel-ratio: 1), (min-device-pixel-ratio: 1), (min-resolution: 120dpi)",
+    ">phone-s": "(min-width: #{ map-get($breakpoints, 'phone-s') + 1 })",
+    "<phone-s": "(max-width: #{ map-get($breakpoints, 'phone-s') })",
+    ">phone-m": "(min-width: #{ map-get($breakpoints, 'phone-m') + 1 })",
+    "<phone-m": "(max-width: #{ map-get($breakpoints, 'phone-m') })",
+    ">phone-l": "(min-width: #{ map-get($breakpoints, 'phone-l') + 1 })",
+    "<phone-l": "(max-width: #{ map-get($breakpoints, 'phone-l') })",
+    ">tablet": "(min-width: #{ map-get($breakpoints, 'tablet') + 1 })",
+    "<tablet": "(max-width: #{ map-get($breakpoints, 'tablet') })",
+    ">desktop-s": "(min-width: #{ map-get($breakpoints, 'desktop-s') + 1 })",
+    "<desktop-s": "(max-width: #{ map-get($breakpoints, 'desktop-s') })",
+    ">desktop-m": "(min-width: #{ map-get($breakpoints, 'desktop-m') + 1 })",
+    "<desktop-m": "(max-width: #{ map-get($breakpoints, 'desktop-m') })",
+    ">desktop-l": "(min-width: #{ map-get($breakpoints, 'desktop-l') + 1 })",
+    "<desktop-l": "(max-width: #{ map-get($breakpoints, 'desktop-l') })",
+  );
+  @return map-get( $condMap, $c );
+}
+
+// The mdia mixin
+@mixin media($args...) {
+    $query: "";
+    @each $arg in $args {
+        $op: "";
+        @if ( $query != "" ) {
+        $op: " and ";
+        }
+        $query: $query + $op + translate-media-condition($arg);
+    }
+    @media #{$query}  { @content; }
+}
+
+// the :export directive is the magic sauce for webpack
+:export {
+    phoneS: map-get($breakpoints, 'phone-s');
+    phoneM: map-get($breakpoints, 'phone-m');
+    phoneL: map-get($breakpoints, 'phone-l'); 
+    tablet: map-get($breakpoints,'tablet'); 
+    desktopS: map-get($breakpoints, 'desktop-s');
+    desktopM: map-get($breakpoints, 'desktop-m');
+    desktopL: map-get($breakpoints, 'desktop-l');
+}

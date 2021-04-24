@@ -1,0 +1,104 @@
+// Font Variables
+
+$font-path: "../fonts";
+
+$font-headline-sans: (
+    "name": "Antonio",
+    "familyType": serif,
+    "weights": (
+        100: "Thin", 
+        200: "ExtraLight", 
+        300: "Light", 
+        400: "Regular", 
+        500: "Medium",
+        600: "SemiBold",
+        700: "Bold"
+    ),
+    "hasItalic": false
+);
+
+$font-headline-serif: (
+    "name": "Rubik",
+    "familyType": serif,
+    "weights": (
+        100: "Light",
+        200: "Regular",
+        300: "Medium",
+        400: "SemiBold",
+        500: "Bold",
+        600: "ExtraBold",
+        700: "Black",
+    ),
+    "hasItalic": true
+);
+
+$font-body-serif: (
+    "name": "RobotoSlab",
+    "familyType": serif,
+    "weights": (
+        100: "Thin",
+        200: "ExtraLight",
+        300: "Light",
+        400: "Regular",
+        500: "Medium",
+        600: "SemiBold",
+        700: "Bold",
+        800: "ExtraBold",
+        900: "Black"
+    ),
+    "hasItalic": false
+);
+
+$fonts-maps: ($font-headline-sans, $font-headline-serif, $font-body-serif);
+$font-family-primary: map-get($font-headline-serif, 'name'), sans-serif;
+$font-family-secondary: map-get($font-headline-sans, 'name'), serif;
+$font-family-tertiary: map-get($font-body-serif, 'name'), serif;
+
+$font-headings-primary: (
+    "small": (
+        "regular": (
+            font-family: $font-family-primary,
+            font-weight: 900,
+            font-style: normal,
+            line-height: 1.2em
+        ),
+        "small": (
+            font-family: $font-family-primary,
+            font-weight: 900,
+            font-style: normal,
+            line-height: 1.2em
+        )
+    )
+);
+
+//Generates font-face blocks based on $fonts-maps
+@each $map in $fonts-maps {
+    @debug $map;
+    @each $weight, $value in map-get($map, 'weights') {
+        $fam-name: map-get($map, 'name');
+        $fam-weight: $weight;
+        $fam-has-italics: map-get($map, 'hasItalic');
+        $fam-variation: $value;
+        $fam-type: map-get($map, 'familyType');
+
+        @font-face {
+            font-family: '#{$fam-name}';
+            font-style: normal;
+            font-weight: $fam-weight;
+            font-display: swap;
+            src: url("#{$font-path}/#{$fam-name}-#{$fam-variation}.ttf") format('truetype')
+        } 
+
+        @if($fam-has-italics) {
+            @font-face {
+                font-family: '#{$fam-name}';
+                font-style: italic;
+                font-weight: $fam-weight;
+                font-display: swap;
+                src: url("#{$font-path}/#{$fam-name}-#{$fam-variation}Italic.ttf") format('truetype')
+            }  
+        }
+    }
+}
+
+
